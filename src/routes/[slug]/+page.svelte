@@ -31,7 +31,6 @@
 	});
 </script>
 
-<div class="flex h-screen w-full flex-col items-center justify-center gap-8">
 	{#if accessError}
 		<h1 class="text-xl font-bold text-red-500">{accessError}</h1>
 	{:else if needsPassword}
@@ -41,6 +40,8 @@
 				link = data;
 			}}
 		/>
+{:else if !link}
+	<h1 class="text-xl font-bold">Loading...</h1>
 	{:else if link?.type === 'redirect'}
 		<h1>This is a redirect link</h1>
 		<a target="_blank" href={link.redirect_url} class="text-blue-500 underline">
@@ -49,6 +50,5 @@
 	{:else if link?.type === 'message'}
 		<h1 class="text-xl font-bold">{link.message}</h1>
 	{:else}
-		<h1 class="text-xl font-bold">Loading...</h1>
+	<h1 class="text-xl font-bold">Error</h1>
 	{/if}
-</div>

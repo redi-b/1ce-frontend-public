@@ -29,6 +29,9 @@ export async function accessLink(slug: string, password?: string): Promise<Acces
 				case 404:
 					msg = 'Link not found. It may have been deleted or does not exist.';
 					break;
+				case 429:
+					msg = 'Too many requests. Please wait a moment before trying again.';
+					break;
 			}
 
 			return { success: false, status: response.status, message: msg };

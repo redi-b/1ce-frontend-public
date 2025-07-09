@@ -8,7 +8,7 @@ interface LinkSummary {
 	requires_password: boolean;
 }
 
-export const load: PageServerLoad = async ({ params }) => {
+export const load: PageServerLoad = async ({ params, fetch }) => {
 	const { slug } = params;
 
 	if (!slug) {

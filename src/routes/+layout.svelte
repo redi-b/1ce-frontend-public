@@ -9,7 +9,7 @@
 	let { children } = $props();
 </script>
 
-<ModeWatcher />
+<ModeWatcher modeStorageKey="1ce-theme" themeStorageKey="1ce-color-scheme" />
 
 <div class="flex h-screen w-full flex-col items-center justify-center gap-8">
 	<div class="absolute top-4 left-4 flex items-center gap-2">

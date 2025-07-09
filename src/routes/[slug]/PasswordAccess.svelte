@@ -44,7 +44,7 @@
 <Card.Root class="min-h-56 w-[90vw] max-w-lg sm:w-[75vw] md:w-[50vw]">
 	<Card.Header>
 		<div class="mx-auto mb-2 w-fit">
-			<LockKeyhole size={36} />
+			<LockKeyhole size={36} class="text-[#2ecc71]" />
 		</div>
 		<Card.Title class="text-lg">This link requires a password</Card.Title>
 		<Card.Description>Please enter the password to continue.</Card.Description>
